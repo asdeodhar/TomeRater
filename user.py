@@ -19,7 +19,7 @@ class User(object):
     Dunder methods for User class
     """
     def __repr__(self):
-        books_read = self.books.get("read", 0)
+        books_read = len(self.books)
         return "User {}, email: {}, books read :{}".format(self.name, self.email, books_read)
 
     def __eq__(self, other_user):
